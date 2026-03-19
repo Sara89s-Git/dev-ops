@@ -1,0 +1,65 @@
+work@saravanan MINGW64 /d/devops/vcs-task (vcs-task-branch)
+$ git commit -m 'removed files'
+[vcs-task-branch 425b7d7] removed files
+ 2 files changed, 348 deletions(-)
+ delete mode 100644 01_sh_script_loop.sh
+ delete mode 100644 log.txt
+
+
+work@saravanan MINGW64 /d/devops/vcs-task (vcs-task-branch)
+$ git push -u origin master
+To https://github.com/Sara89s-Git/dev-ops.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Sara89s-Git/dev-ops.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+work@saravanan MINGW64 /d/devops/vcs-task (vcs-task-branch)
+$ git push -u 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 272 bytes | 272.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Sara89s-Git/dev-ops.git
+   c834972..425b7d7  vcs-task-branch -> vcs-task-branch
+branch 'vcs-task-branch' set up to track 'origin/vcs-task-branch'.
+
+
+work@saravanan MINGW64 /d/devops/vcs-task (vcs-task-branch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+
+work@saravanan MINGW64 /d/devops/vcs-task (master)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 898 bytes | 224.00 KiB/s, done.
+From https://github.com/Sara89s-Git/dev-ops
+   f917af3..c394699  master     -> origin/master
+Updating a5707c9..c394699
+Fast-forward
+ vcs-task/images/merge-conflict.png | Bin 0 -> 104636 bytes
+ vcs-task/new-file-for-merge.txt    |   3 +++
+ 2 files changed, 3 insertions(+)
+ create mode 100644 vcs-task/images/merge-conflict.png
+
+
+work@saravanan MINGW64 /d/devops/vcs-task (master)
+$ git merge vcs-task-branch
+Merge made by the 'ort' strategy.
+ 01_sh_script_loop.sh |   2 -
+ log.txt              | 346 ---------------------------------------------------
+ 2 files changed, 348 deletions(-)
+ delete mode 100644 01_sh_script_loop.sh
+ delete mode 100644 log.txt
+
+
