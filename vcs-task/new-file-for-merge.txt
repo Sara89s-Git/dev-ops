@@ -1,3 +1,4 @@
 this file is created from git-hub to demop merge
 edited file from git-hub
 edited file from git-hub after creating the branch vcs-task-branch.
+edited from terminal localy.
